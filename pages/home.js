@@ -2,10 +2,10 @@ import {useEffect} from 'react';
 import axios from 'axios'
 import Link from "next/link";
 const baseURL = 'https://dummyapi.io/data/api'
-const index = () => {
+const home = () => {
   return (
     <div id="index" style = {{fontFamily: "Helvetica"}}>
-   <table style= {{width:" 98%;", padding: "20px", margin:"1% 0px 0px 1%",
+    <table style= {{width:" 98%;", padding: "20px", margin:"1% 0px 0px 1%",
      borderStyle: "solid",borderColor: "lightsteelblue", borderRadius: "5px", backgroundColor: "lightsteelblue"}} align = "center">
     <tr align="center">
         <td><Link href={"/home"}><label style = {{color: "white",fontWeight: "bold"}}>Home</label></Link></td>
@@ -15,7 +15,8 @@ const index = () => {
         <td><Link href={"/post"}><label style = {{color: "white",fontWeight: "bold"}}>Post</label></Link></td>
     </tr>
     </table>
-    <table style= {{width: "50%"}} align="center">
+    <table style= {{width: "50%",borderStyle: "solid",borderColor: "lightslategray",
+     borderRadius: "20px", backgroundColor: "lightslategray", padding: "20px", color: "white", marginTop: "20px"}} align="center">
         <tr>
             <td>
                 <h2>Sirapop Para</h2>
@@ -23,11 +24,12 @@ const index = () => {
                 <p>sirapop_p@cmu.ac.th</p>
                 <p>(+66)88-5717587</p>
             </td>
-                <img style = {{ float: "right;", width: "150px", height: "150px", margin:"30px 0px 0px 0px"}} src="profile.jpg" alt="profile pic"></img>
+                <img style = {{ float: "right;", width: "150px", height: "150px", marginTop:"15px", marginLeft: "300px", borderRadius: "20%"}}
+                src="profile.jpg" alt="profile pic"></img>
         </tr>
      </table>
 
-     <table style= {{width: "50%"}} align="center">
+     <table style= {{width: "50%", padding: "20px"}} align="center">
         <tr>
             <td>
                 <section>
@@ -69,4 +71,4 @@ const index = () => {
   )
 }
 
-export default index
+export default home
